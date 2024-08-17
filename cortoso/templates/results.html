@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class = "container">
+        <h2>Results</h2>
+        <div>
+            <strong>Original Text: </strong> {{ original_text }}
+        </div>
+        <div>
+            <strong>Translated Text: </strong> {{ translated_text }}
+        </div>
+        <div>
+            <strong>Target Language code: </strong> {{ target_language }}
+        </div>
+        <div>
+            <a href = " {{ url_for('index')}}">Re-translate</a> <!--Link back to homepage-->
+        </div>
+    </div>
+
+
+{% endblock %}

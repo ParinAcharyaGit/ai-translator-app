@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Language Translator Service</h1>
+    <form method="post">
+        <div class="form-group">
+            <textarea name="text" cols="100" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group mt-3">
+            <label for="language">Select Language:</label>
+            <select name="language" id="language" class="form-select">
+                {% for language in languages %}
+                    <option value="{{ language }}">{{ language }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
